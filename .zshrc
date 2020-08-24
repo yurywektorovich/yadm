@@ -55,8 +55,6 @@ alias gst="git stash"
 alias gstl="git stash list"
 alias glg='git log --graph --oneline --decorate --all'
 
-# Exports
-
 #Plugins setup
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=,bg=cyan,bold,underline"
 
