@@ -72,7 +72,7 @@ sourceZsh(){
 
 editZsh(){
     updateYadm
-    vim ~/.zshrc
+    code ~/.zshrc
     source ~/.zshrc
     backupToDrive ~/.zshrc
     echo "New .zshrc sourced."
