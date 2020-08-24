@@ -20,7 +20,6 @@ source $ZSH/oh-my-zsh.sh
 #History setup
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
-SAVEHIST=$HISTSIZ
 
 setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
@@ -88,6 +87,6 @@ updateYadm() {
 backupToDrive(){
     yadm add ~/.zshrc
     yadm commit -m "updated .zshrc"
-    yadm push
+    yadm push -u origin master
     echo "New .zshrc backed up to yadm."
 }
