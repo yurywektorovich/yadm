@@ -5,8 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh installation.
+# Exports
 export ZSH="/home/yury/.oh-my-zsh"
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem
+
+PATH=$PATH:$(ruby -e 'puts Gem.bindir')
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-completions node web-search sudo fzf zsh-autosuggestions zsh-syntax-highlighting) 
@@ -14,8 +18,6 @@ plugins=(git zsh-completions node web-search sudo fzf zsh-autosuggestions zsh-sy
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
 
 #History setup
 HISTFILE=$HOME/.zsh_history
@@ -40,6 +42,7 @@ alias ls="colorls"
 alias config="code $HOME/.zshrc"
 alias now="cd $HOME/Projects/js/now"
 alias reload="source $HOME/.zshrc"
+alias lc='colorls -lA --sd'
 
 # Git aliases
 alias gi="git init"
@@ -63,6 +66,7 @@ source ~/Software/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Backup
 sourceZsh(){
