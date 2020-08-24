@@ -13,7 +13,7 @@ export GEM_PATH=~/.gem
 PATH=$PATH:$(ruby -e 'puts Gem.bindir')
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions node web-search sudo fzf zsh-autosuggestions zsh-syntax-highlighting) 
+plugins=(git fzf colored-man-pages zsh-completions web-search zsh-autosuggestions zsh-syntax-highlighting) 
 
 autoload -U compinit && compinit
 
