@@ -59,7 +59,7 @@ alias gstl="git stash list"
 alias glg='git log --graph --oneline --decorate --all'
 
 #Plugins setup
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=,bg=cyan,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bg=cyan,bold"
 
 POWERLEVEL10K_MODE='nerdfont-complete'
 source ~/Software/powerlevel10k/powerlevel10k.zsh-theme
